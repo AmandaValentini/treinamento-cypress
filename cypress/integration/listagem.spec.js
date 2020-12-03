@@ -20,18 +20,7 @@ context('Listagem', () => {
             method: 'GET',
             url: '**/api/1/databases/userdetails/collections/newtable?**',
             status: 200,
-            response: [
-                {
-                  "_id":{
-                    "$oid":"5c20988c1f6e4f3cb11d6477"
-                  },
-                  "FirstName":"neelkanth",
-                  "LastName":"sundaram",
-                  "Email":"nks@gmail.com",
-                  "Phone":"7073178560",
-                  "Gender":"Male"
-                }
-              ]
+            response: 'fixture:webtable-unicoregistro'
         } )
 
         cy.visit('http://demo.automationtesting.in/WebTable.html');

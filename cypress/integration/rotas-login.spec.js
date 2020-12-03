@@ -1,7 +1,7 @@
 /// <reference types="cypress" />
 
 describe('Validando o status das rotas ', () => {
-    it('VAlidando rotas no fluxo de login', () => {
+    it('Validando rotas no fluxo de login', () => {
         cy.server()
         cy.route('POST', '**/users/send_user_data/').as('postUsers')
         

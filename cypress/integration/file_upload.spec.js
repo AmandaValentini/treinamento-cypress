@@ -32,12 +32,18 @@ describe('Teste File upload via webdriveruniversity', () => {
         const yourFixturePath = 'example.json';
         cy.get('#myFile').attachFile(yourFixturePath);
         cy.get("#submit-button").click();
+        cy.on('window:alert', (alertMessage) => {
+            expect(alertMessage).contains('Your file has now been uploaded!')
+          })
     });
 
     it("Upload no file....", () => {
         cy.visit("http://www.webdriveruniversity.com")
         cy.get('#file-upload').invoke('removeAttr', 'target').click({force:true})
         cy.get("#submit-button").click();
+        cy.on('window:alert', (alertMessage) => {
+            expect(alertMessage).contains('You need to select a file to upload!')
+          })
     });
     
 });
