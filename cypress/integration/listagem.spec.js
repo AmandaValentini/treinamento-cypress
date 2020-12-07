@@ -20,7 +20,7 @@ context('Listagem', () => {
             method: 'GET',
             url: '**/api/1/databases/userdetails/collections/newtable?**',
             status: 200,
-            response: 'fixture:webtable-unicoregistro'
+            response: 'fixture:webtable-multiplos'
         } )
 
         cy.visit('http://demo.automationtesting.in/WebTable.html');
